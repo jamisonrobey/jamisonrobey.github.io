@@ -1,5 +1,3 @@
-Here you can say lots of fun things about your site.
+This blog is a continuously updated lists of all the projects I've worked on. \
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+For archival purposes.
