@@ -58,4 +58,4 @@ wetGain.connect(ac.destination);
 NextJS, Typescript + TailwindCSS.
 
 #### Code
-[https://github.com/jamisonrobey/mock-audio-plugin-website]
+[Repo](https://github.com/jamisonrobey/mock-audio-plugin-website)
