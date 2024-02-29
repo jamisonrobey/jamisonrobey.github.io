@@ -53,3 +53,9 @@ preDelayNode.connect(convolver);
 convolver.connect(wetGain);
 wetGain.connect(ac.destination);
 ```
+
+#### Technology Stack
+NextJS, Typescript + TailwindCSS.
+
+#### Code
+https://github.com/jamisonrobey/mock-audio-plugin-website
