@@ -1,21 +1,27 @@
 # Early Reflections - A Fictional Audio Plugin Website
 
+## Visit the website:
+
+### [Early Reflections](https://earlyreflections.pages.dev/)
+
 ## Summary
 
 Early Reflections is a website for a fictional audio plugin company that offers a unique feature: interactive demos of their plugins with pre-loaded samples. This allows users to try out the audio plugins right in their browser, attracting potential customers.
+
 ## Motivation
 
 This project began as a simple experiment to see if I could create audio effects in a browser environment. Once I realised the power of the Web Audio API, I decided to create a more ambitious project, which ultimately became Early Reflections.
 
 # Features
 
-The site offers several features for users to explore: 
+The site offers several features for users to explore:
+
 - Audio effect bypassing / toggling:
-	- Users can choose to process the audio signal with an effect or bypass it to compare the difference.
+  - Users can choose to process the audio signal with an effect or bypass it to compare the difference.
 - Control audio parameters:
-	- Users can adjust parameters either by scrolling on the knobs or inputting them manually. 
+  - Users can adjust parameters either by scrolling on the knobs or inputting them manually.
 - A sleek 3D Audio Visualiser:
-	- Adds a visual element to the audio experience.
+  - Adds a visual element to the audio experience.
 
 # Technical
 
@@ -54,13 +60,15 @@ audioSource.connect(compressor);
 
 # Limitations / Improvements
 
-A limitation of the site is I did not consider the effect chaining. This is an oversight I didn't realise until far into the project, which could be added at a later date, but is not crucial to the site's functionality. 
+A limitation of the site is I did not consider the effect chaining. This is an oversight I didn't realise until far into the project, which could be added at a later date, but is not crucial to the site's functionality.
 
 Ideally, it would be good to have standard effect chaining i.e. reverb effect is the last effect, and processes the single from all effects first. In the current implementation, the effects do not chain into each other properly.
+
 # Technology Stack
 
 NextJS, Typescript + TailwindCSS.
 
 # Code
+
 [Repo](https://github.com/jamisonrobey/mock-audio-plugin-website)
 [Deployment](earlyreflections.pages.dev)
