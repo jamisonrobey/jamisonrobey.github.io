@@ -16,6 +16,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   blog = "/:slug/"
   tags = "/blog/:slug"
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+
 [params]
   hideMadeWithLine = true # https://github.com/janraasch/hugo-bearblog credit for theme
 
