@@ -1,3 +1,11 @@
 {{ if .Param "math" }}
     {{ partialCached "math.html" . }}
 {{ end }}
+
+<style>
+p img {
+  display: inline-block;
+  margin: 5px;
+  vertical-align: top;
+}
+</style>
