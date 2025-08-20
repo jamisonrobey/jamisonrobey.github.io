@@ -36,19 +36,9 @@ This also gave me experience with protocols used by exchanges.
 
 ### Downstream
 
-The [`Downstream_Server`](https://github.com/jamisonrobey/itch-mold-replay/blob/main/src/server/downstream_server.h) class handles the downstream feed by sequentially reading the file and packing ITCH messages into MoldUDP64 packets. It calculates when to send each packet by scaling the time elapsed since the first message:
+The [`Downstream_Server`](https://github.com/jamisonrobey/itch-mold-replay/blob/main/src/server/downstream_server.h) class handles the downstream feed by sequentially reading the file and packing ITCH messages into MoldUDP64 packets. It calculates when to send each packet by taking the elapsed time since the first message timestamp and dividing by the replay speed to get the scaled delay. This is then added to the replay start time to get the absolute wall-clock time to transmit the packet.
 
-```cpp
-if (replay_ctx_.first_timestamp.count() == 0)
-{
-    replay_ctx_.first_timestamp = replay_ctx_.current_timestamp;
-    return;
-}
-const std::chrono::nanoseconds elapsed{replay_ctx_.current_timestamp 
-                                      - replay_ctx_.first_timestamp};
-const auto delay{replay_ctx_.replay_start_time + (elapsed / replay_ctx_.speed)};
-```
-The delay calculation takes the elapsed time since the first message timestamp and divides by the replay speed to get the scaled delay. This is then added to the replay start time to get the absolute wall-clock time to transmit the packet. The timestamps are extracted as nanoseconds since midnight from each ITCH message (a feature in TotalView).
+
 
 ### Retransmission 
 
