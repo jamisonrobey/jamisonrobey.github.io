@@ -61,7 +61,8 @@ First, choose a power of 2 for fast modulo operations (bit masking instead of di
 
 The actual size depends on your desired retransmission window. Here are some statistics from testing with a NASDAQ ESM TotalView file to help decide:
 
-The average message length was ~30 bytes. Including the 2-byte length prefix per message in MoldUDP64, each message consumes ~32 bytes on average. Each downstream packet has a maximum size of 1300 bytes, we use 1300 instead of the full 1500-byte MTU to account for IP/UDP headers and leaving overhead in case for VPNs etc that might add data to frames. With the 20-byte MoldUDP64 header, this leaves 1280 bytes for messages, giving us a rough estimate of (a feature in TotalView):
+The average message length was ~30 bytes. Including the 2-byte length prefix per message in MoldUDP64, each message consumes ~32 bytes on average. Each downstream packet has a maximum size of 1300 bytes, we use 1300 instead of the full 1500-byte MTU to account for IP/UDP headers and leaving overhead in case for VPNs etc that might add data to frames. With the 20-byte MoldUDP64 header, this leaves 1280 bytes for messages, giving us a rough estimate of:
+
 ```1280 / 32 = 40 messages per packet```
 
 At market open, the server sent ~20,000 packets/second, resulting in:
