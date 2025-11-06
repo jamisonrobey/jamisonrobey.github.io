@@ -1,6 +1,6 @@
 baseURL = "jamisonrobey.github.io"
 
-theme = 'hugo-bearblog'
+# theme = 'hugo-bearblog'
 
 title = "Jamison Robey"
 author = "Jamison Robey"
@@ -10,7 +10,7 @@ languageCode = "en-AU"
 enableRobotsTXT = true
 
 # https://bearblog.dev/ urls
-disableKinds = ["taxonomy"]
+disableKinds = ["taxonomy", "term", "section"]
 ignoreErrors = ["error-disable-taxonomy"]
 [permalinks]
   blog = "/:slug/"
@@ -22,7 +22,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 
 [params]
-  hideMadeWithLine = true # https://github.com/janraasch/hugo-bearblog credit for theme
+  hideMadeWithLine = true # https://github.com/janraasch/hugo-bearblog credit theme
 
   description = "Blog"
 
